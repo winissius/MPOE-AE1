@@ -15,8 +15,11 @@ public class Principal {
 
         No noNovo = l.noPosicao(20);
 
-        l.insereDepois(noNovo, 100);
-        System.out.println("\nInsere depois");
+        // l.insereDepois(noNovo, 100);
+        System.out.println("\n Remove");
+        l.remove(noNovo);
+        No noNovo2 = l.noPosicao(10);
+        l.remove(noNovo2);
         l.mostrar();
 
         /*l.removeUltimo();

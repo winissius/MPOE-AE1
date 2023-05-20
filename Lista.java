@@ -63,19 +63,30 @@ public class Lista {
         return noBusca;
     }
 
-    public void insereDepois(No noBusca, int info){
+    /*public void insereDepois(No noBusca, int info){
         No auxiliar = primeiro;
         No anterior = new No();
         No novo = new No();
+        while(auxiliar != noBusca){
+            anterior = auxiliar;
+            auxiliar = auxiliar.getProximo();
+        }
         if(auxiliar == noBusca){
             anterior.setProximo(noBusca);
-            novo.setInfo(info);
-            novo.setProximo(auxiliar);
-        }else{
-            while(auxiliar != noBusca){
-                anterior = auxiliar;
-                auxiliar = auxiliar.getProximo();
-            }
+        }
+    }*/
+
+    public void remove(No noRemover){
+        No auxiliar = primeiro;
+        No anterior = new No();
+        No proximo = new No();
+        while(auxiliar != noRemover){
+            anterior = auxiliar;
+            auxiliar = auxiliar.getProximo();
+            proximo = auxiliar.getProximo();
+        }
+        if(auxiliar == noRemover){
+            anterior.setProximo(proximo);
         }
     }
     public void mostrar(){
