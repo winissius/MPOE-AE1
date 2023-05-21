@@ -63,18 +63,18 @@ public class Lista {
         return noBusca;
     }
 
-    /*public void insereDepois(No noBusca, int info){
+    public void insereDepois(No noBusca, int info){
         No auxiliar = primeiro;
-        No anterior = new No();
         No novo = new No();
+        novo.setInfo(info);
         while(auxiliar != noBusca){
-            anterior = auxiliar;
             auxiliar = auxiliar.getProximo();
         }
         if(auxiliar == noBusca){
-            anterior.setProximo(noBusca);
+            novo.setProximo(auxiliar.getProximo());
+            auxiliar.setProximo(novo);
         }
-    }*/
+    }
 
     public void remove(No noRemover){
         No auxiliar = primeiro;

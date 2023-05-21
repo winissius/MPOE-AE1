@@ -21,6 +21,14 @@ public class Principal {
         No noNovo2 = l.noPosicao(10);
         l.remove(noNovo2);
         l.mostrar();
+        System.out.println("\n Insere depois");
+        No noNovo3 = l.noPosicao(30);
+        l.insereDepois(noNovo3, 100);
+        l.mostrar();
+        System.out.println("\n Insere depois 2");
+        No noNovo4 = l.noPosicao(100);
+        l.insereDepois(noNovo4, 101);
+        l.mostrar();
 
         /*l.removeUltimo();
         System.out.println();
