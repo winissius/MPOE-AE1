@@ -33,24 +33,27 @@ public class Lista {
         }
     }
     public void removePrimeiro(){
-        No novo = new No();
-        novo = primeiro.getProximo();
-        primeiro.setInfo(null);
-        primeiro.setProximo(null);
-        primeiro = novo;
-
+        if(!vazia()){
+            No novo = new No();
+            novo = primeiro.getProximo();
+            primeiro.setInfo(null);
+            primeiro.setProximo(null);
+            primeiro = novo;
+        }
     }
     public void removeUltimo(){
-        No auxiliar = primeiro; // no auxiliar para percorrer a lista
-        No anterior = primeiro; // noa nterior para salvar o anterior visando realizar operacaoes
-        while(auxiliar != null && auxiliar.getProximo() != null){
-            anterior = auxiliar;
-            auxiliar = auxiliar.getProximo();
-        }
-        if(auxiliar.getProximo() == null){
-            anterior.setProximo(null); // o anterior se torna o ultimo entao o proximo dele se torna null
-            auxiliar.setInfo(null); // remove as informacoes do ultimo
-            auxiliar.setProximo(null); // remove as informacoes do ultimo
+        if(!vazia()){
+            No auxiliar = primeiro; // no auxiliar para percorrer a lista
+            No anterior = primeiro; // noa nterior para salvar o anterior visando realizar operacaoes
+            while(auxiliar != null && auxiliar.getProximo() != null){
+                anterior = auxiliar;
+                auxiliar = auxiliar.getProximo();
+            }
+            if(auxiliar.getProximo() == null){
+                anterior.setProximo(null); // o anterior se torna o ultimo entao o proximo dele se torna null
+                auxiliar.setInfo(null); // remove as informacoes do ultimo
+                auxiliar.setProximo(null); // remove as informacoes do ultimo
+            }
         }
     }
 
@@ -99,5 +102,6 @@ public class Lista {
                 auxiliar = auxiliar.getProximo();
             }
         }
+        System.out.println();
     }
 }

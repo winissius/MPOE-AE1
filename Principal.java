@@ -1,56 +1,43 @@
 public class Principal {
     public static void main(String[] args) {
+        System.out.println("Iniciando lista vazia");
         Lista l = new Lista();
+        l.mostrar();
 
+        System.out.println("Insere ultimo");
         l.insereUltimo(10);
         l.insereUltimo(20);
         l.insereUltimo(30);
-
-        l.inserePrimeiro(50);
-
-        l.insereUltimo(5);
-
         l.mostrar();
 
+        System.out.println("\nInserrir primeiro");
+        l.inserePrimeiro(50);
+        l.mostrar();
 
+        System.out.println("\nRemove o nó 20");
         No noNovo = l.noPosicao(20);
-
-        // l.insereDepois(noNovo, 100);
-        System.out.println("\n Remove");
         l.remove(noNovo);
+        l.mostrar();
+        System.out.println("\nRemove o nó 10");
         No noNovo2 = l.noPosicao(10);
         l.remove(noNovo2);
         l.mostrar();
-        System.out.println("\n Insere depois");
+
+        System.out.println("\nInsere depois do nó 30");
         No noNovo3 = l.noPosicao(30);
         l.insereDepois(noNovo3, 100);
         l.mostrar();
-        System.out.println("\n Insere depois 2");
+        System.out.println("\nInsere depois do nó 100");
         No noNovo4 = l.noPosicao(100);
         l.insereDepois(noNovo4, 101);
         l.mostrar();
 
-        /*l.removeUltimo();
-        System.out.println();
-        l.mostrar();
-        System.out.println();
-        l.removePrimeiro();
-        l.mostrar();
-
-        System.out.println();
-        l.removePrimeiro();
-        l.mostrar();
-
-        System.out.println();
-        l.removePrimeiro();
-        l.mostrar();
-
-        System.out.println();
-        // l.removePrimeiro();
+        System.out.println("\nRemove o ultimo");
         l.removeUltimo();
-        l.mostrar();*/
+        l.mostrar();
 
-
-
+        System.out.println("\nRemove o primeiro");
+        l.removePrimeiro();
+        l.mostrar();
     }
 }
